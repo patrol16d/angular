@@ -1,0 +1,12 @@
+<mat-nav-list>
+    <mat-list-item *ngFor="let task of tasks; let taskIdx = index">
+        <span mat-line
+		[class.done]="this.task.done===true">
+		{{task.description}}
+	</span>
+	<button mat-button (click)="task.done=!task.done">ZROBIONE</button>
+        <button mat-button color="warn" (click)="removeTask(taskIdx)">
+            USUŃ
+        </button>
+    </mat-list-item>
+</mat-nav-list>
