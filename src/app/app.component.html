@@ -4,7 +4,7 @@
 <div style="padding: 10px;">
     <mat-form-field>
         <input #newTask matInput placeholder="New task"
-	 (keydown.enter)="handleTaskAdd(newTask.value);newTask.value=''";
+	 (keydown.enter)="handleTaskAdd(newTask.value);newTask.value=''"
 	>
     </mat-form-field>
     <button mat-button color="accent"
