@@ -5,7 +5,7 @@
 		{{task.description}}
 	</span>
 	<button mat-button (click)="task.done=!task.done">ZROBIONE</button>
-        <button mat-button color="warn" (click)="removeTask(taskIdx)">
+        <button mat-button color="warn" (click)="openDialog(taskIdx, task.description)">
             USUŃ
         </button>
     </mat-list-item>

@@ -17,10 +17,10 @@ export class MyDialogComponent implements OnInit {
   }
 
   close(){
-  	this.dialogRef.close();
+  	this.dialogRef.close(false);
   }
   
   delete(){
-  	this.dialogRef.close(); 
+  	this.dialogRef.close(true, this.data.taskId); 
   }
 }

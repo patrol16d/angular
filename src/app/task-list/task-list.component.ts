@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from '../task';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MyDialogComponent } from '../my-dialog/my-dialog.component';
 
 @Component({
   selector: 'app-task-list',
@@ -8,19 +10,33 @@ import { Task } from '../task';
 })
 export class TaskListComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
   }
 
-@Input()
-tasks: Task[];
+  @Input()
+  tasks: Task[];
 
-@Output()
-remove = new EventEmitter<number>();
+  @Output()
+  remove = new EventEmitter<number>();
+  
+  removeTask(taskIdx: number) {
+        this.remove.emit(taskIdx);
+    }
 
-removeTask(taskIdx: number) {
-    this.remove.emit(taskIdx);
-}
+    openDialog(taskId: number, description: string): void {
+    const dialogRef = this.dialog.open(MyDialogComponent, {
+	data: {
+		taskId: taskId,
+		description: description,
+	}
+	});
 
+   dialogRef.afterClosed().subscribe(result => {
+   	if(result === true){
+		this.removeTask(result.taskId);
+	}
+   });
+   }   
 }
