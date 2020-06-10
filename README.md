@@ -1,27 +1,22 @@
-# TodoList
+## TodoList
+Aplikacja powstała na frameworku Angular wersji `9.1.7`.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+# Wymagania
+* utworzenie __publicznego__ repozytorium na swoim koncie github, o nazwie np. `angular-homework`
+* zrób screena tego pliku, może być pomocny ;)
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Instrukcja 
+1. Sklonuj repozytorium do głównego katalogu `git clone https://github.com/syrekable/yet-another-angular-app.git`
+2. Wejdź do katalogu repo: `cd yet-another-angular-app/`
+3. Dodaj własne repozytorium jako bazę: `git remote set-url origin http://github.com/{NAZWA_UŻYTKOWNIKA}/{NAZWA_REPOZYTORIUM}`
+4. Zmień plik `README.md` (plik, który czytasz :D) za pomocą ulubionego edytora tekstu:
+  * np `nano README.md`
+  * usuń zawartość, wpisz cokolwiek
+  * zapisz i wyjdź
+5. Sprawdź, czy rzeczywiście się zmieniło: `git status`. Powinieneś widzieć coś typu *modified: README.md*
+6. Dodaj zmiany: `git add *`
+7. Utwórz commita: `git commit -m"Zadanie domowe gotowe!"`
+8. Wepchnij do repo: `git push origin master`
+9. Wrzuć projekt na *StackBlitz*: wpisz w przeglądarkę `https://stackblitz.com/github/{NAZWA_uŻYTKOWNIKA}/{NAZWA_REPOZYTORIUM}
+10. Sprawdź, czy działa.
+11. Działa, więc wyślij link do wykładowcy i ciesz się punktami! :D
